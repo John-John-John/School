@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31613.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "John UmbracoProject uppgift2", "John UmbracoProject uppgift2\John UmbracoProject uppgift2.csproj", "{7052BD4B-E630-43BE-92E3-B9F4208940DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7052BD4B-E630-43BE-92E3-B9F4208940DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7052BD4B-E630-43BE-92E3-B9F4208940DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7052BD4B-E630-43BE-92E3-B9F4208940DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7052BD4B-E630-43BE-92E3-B9F4208940DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {85EBD2C1-E937-4390-A146-AE95FB446689}
+	EndGlobalSection
+EndGlobal

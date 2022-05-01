@@ -1,0 +1,32 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.NewsArticles>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	Layout = "Master.cshtml";
+}
+
+
+@{
+	var selection = Umbraco.Content(Guid.Parse("ac5ce8e9-514b-4c53-a854-f49a941b27ee"))
+    .Children()
+    .Where(x => x.IsVisible())
+    .OrderByDescending(x => x.CreateDate);
+}
+
+
+@foreach (var item in selection)
+            {
+             <a href="@item.Url()">
+                <div>
+                    @item.Value("title")
+                </div>
+                 
+                @{
+                var image = item.Value<IPublishedContent>("leadImage");
+                }
+
+                        <div>
+                            <img src="@image.Url()" class="img-fluid"/></div>
+            </a>
+              }
+

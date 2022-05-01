@@ -1,0 +1,37 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.SportArticles>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	Layout = "Master.cshtml";
+}
+
+
+
+
+
+
+
+
+@{
+	var selection = Umbraco.Content(Guid.Parse("76c52b45-d783-4910-ad56-e3092f347e9e"))
+    .Children()
+    .Where(x => x.IsVisible())
+    .OrderByDescending(x => x.CreateDate);
+}
+
+
+@foreach (var item in selection)
+            {
+             <a href="@item.Url()">
+                <div>
+                    @item.Value("title")
+                </div>
+                 
+                @{
+                var image = item.Value<IPublishedContent>("leadImage");
+                }
+
+                        <div>
+                            <img src="@image.Url()" class="img-fluid"/></div>
+            </a>
+              }
